@@ -19,7 +19,6 @@ pseudo_selection/
 *.csv
 *.tsv
 *.parquet
-*.png
 *.jpg
 *.jpeg
 *.tif
