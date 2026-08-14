@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this method implementation, please cite the paper in preferred-citation."
+title: "IDR-SSCL method implementation"
+type: software
+version: 0.1.0
+license: Apache-2.0
+authors:
+  - family-names: Gao
+    given-names: Yuxuan
+  - family-names: Wen
+    given-names: Chi
+  - family-names: Li
+    given-names: He
+  - family-names: Tan
+    given-names: Qingxiong
+  - family-names: Ye
+    given-names: Mang
+preferred-citation:
+  type: conference-paper
+  title: "Semi-Supervised Concept Infused Pseudo-Label Refining for Interpretable Diabetic Retinopathy Grading"
+  authors:
+    - family-names: Gao
+      given-names: Yuxuan
+    - family-names: Wen
+      given-names: Chi
+    - family-names: Li
+      given-names: He
+    - family-names: Tan
+      given-names: Qingxiong
+    - family-names: Ye
+      given-names: Mang
+  collection-title: "ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)"
+  year: 2026
+  start: 8082
+  end: 8086
+  doi: "10.1109/ICASSP55912.2026.11462792"

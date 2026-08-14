@@ -1,0 +1,56 @@
+# Dataset Configuration
+dataset_config:
+  dataset: APTOS
+  num_workers: 8
+  batch_size: 16
+
+  # DATASET VARIABLES
+  sampling_percent: 1
+  test_subsampling: 1
+  weight_loss: True
+
+intervention_config:
+  competence_levels: [ 1, 0 ]
+  intervention_freq: 1
+  intervention_batch_size: 1024
+  intervention_policies:
+    - policy: "random"
+      group_level: True
+      use_prior: True  # This will make the random policy use the learnt IntCEM prior!!!
+# Representation metrics
+# Change to False if you want representation metrics to be included in the
+# evaluation (may significantly increase experiment times)
+skip_repr_evaluation: False
+run_repr_avg_pred: True
+run_cas: False
+run_nis: False
+run_ois: False
+
+max_epochs: 100
+top_k_accuracy: null
+save_model: True
+patience: 10
+emb_size: 32
+extra_dims: 0
+concept_loss_weight_labeled: 1   # 1 is best
+concept_loss_weight_unlabeled: 0.1  # 0.1 is best
+learning_rate: 1e-4
+weight_decay: 5e-4
+weight_loss: False
+c_extractor_arch: resnet50
+optimizer: adamw 
+bool: False
+early_stopping_monitor: val_loss
+early_stopping_mode: min
+early_stopping_delta: 0.0
+momentum: 0.9
+sigmoidal_prob: False
+training_intervention_prob: 0 #0.25
+k: 3  # Number of neighbors for local graph construction
+
+runs:
+  - architecture: 'Ours_CEM'
+    run_name: "Ours_CEM"
+    sigmoidal_prob: True
+    training_intervention_prob: 0
+    embedding_activation: "leakyrelu"
